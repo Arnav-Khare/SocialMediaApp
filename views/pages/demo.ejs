@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <%- include('../particles/head'); %>
+
+        <link rel="stylesheet" type="text/css" href="CSS/homepage.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/chat.css">
+
+    </head>
+    <body>    
+      <header>
+        <%- include('../particles/headeruser'); %>
+      </header>
+      
+      <div class="container-fluid py-md-5 h-75">
+         <input type="text" id="searchuser" onkeyup="myFunction()">
+      </div>
+      <footer>
+        <p class="text-center"> SocialMediaApp</p> 
+      </footer>
+
+      <script>
+        function myFunction(){
+             const input = document.getElementById('searchuser')
+             const filter = input.value;
+             $.ajax({
+                 url:'/searching',
+                 data:JSON.stringify({
+                     value:filter
+                 }),
+                 success:function(){console.log('Success')},
+                 dataType:JSON
+             })
+         }
+      </script>
+    </body>
+</html>

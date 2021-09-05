@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <%- include('../particles/head'); %>
+        
+
+        <link rel="stylesheet" type="text/css" href="CSS/homepage.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/chat.css">
+    </head>
+    <body>    
+      <header>
+        <%- include('../particles/headeruser'); %>
+      </header>
+      <div class="container w-50 py-md-5 h-75 container--narrow">
+         <form action="/create-post" method="POST">
+                <div class="form-group">
+                    <label for="post-title" class="text-muted mb-1">
+                        <small>Title</small>
+                    </label>
+                    <input required="" name="title" id="post-title" class="form-control form-control-lg form-control-title " type="text" placeholder="" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="post-body" class="text-muted mb-1">
+                        <small>Body content</small>
+                    </label>
+                    <input required="" name="body" id="post-body" class="form-control form-control-lg form-control-title" type="text" placeholder="" autocomplete="off">
+                </div>
+                <button class="btn btn-primary">Save New Post</button>
+         </form>
+
+      </div>
+      <%- include('../particles/chat'); %>
+      <footer>
+        <p class="text-center"> SocialMediaApp</p>       </footer>
+
+
+    </body>
+</html>

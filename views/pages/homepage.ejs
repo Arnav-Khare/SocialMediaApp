@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <%- include('../particles/head'); %>
+
+        <link rel="stylesheet" type="text/css" href="CSS/homepage.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/chat.css">
+
+    </head>
+    <body>    
+      <header>
+        <%- include('../particles/headeruser'); %>
+      </header>
+      
+      <div class="container-fluid py-md-5 h-75">
+          <div class="center text-center w-50">
+            <h2>Hello <strong><%=username%></strong>, your feed is empty.</h2>
+            <p class="lead w-100 pt-md-5"  >Your feed displays the latest posts from the people you follow. If you don’t have any friends to follow that’s okay; you can use the “Search” feature in the top menu bar to find content written by people with similar interests and then follow them.</p>
+          </div>
+      </div>
+      
+      <%- include('../particles/chat'); %>
+      <footer>
+       <p class="text-center"> SocialMediaApp</p> 
+      </footer>
+
+
+    </body>
+</html>
